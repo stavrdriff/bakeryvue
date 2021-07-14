@@ -1,5 +1,5 @@
 <template>
-  <carousel :data="carou" :controls="true"></carousel>
+  <carousel :data="carou" :controls="true">sdfsdf</carousel>
 </template>
 
 <script>

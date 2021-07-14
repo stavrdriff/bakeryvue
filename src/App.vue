@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <page-header />
+    <PageHeader></PageHeader>
+    <router-view />
 
     <slider />
 
@@ -39,51 +40,16 @@
       <h2>Modal 3</h2>
     </modal>
 
-    <ProductCard
-      v-for="product in products"
-      :key="product.id"
-      :product="product"
-      @toCart="cart = $event"
-    />
     {{ cart }}
   </div>
 </template>
 <script>
-import ProductCard from "./components/ProductCard";
 import Modal from "./components/Modal";
 import Slider from "./components/Slider.vue";
 
 export default {
   data: () => {
     return {
-      products: [
-        {
-          id: 123,
-          title: "Pepperoni Pizza",
-          price: 24.99,
-          discount: 5,
-          image: "image1.jpg",
-        },
-        {
-          id: 234,
-          title: "Baked Pancakes",
-          price: 44.89,
-          discount: 3,
-          image: "image1.jpg",
-        },
-        {
-          id: 345,
-          title: "Avocado",
-          price: 20.0,
-          image: "image1.jpg",
-        },
-        {
-          id: 456,
-          title: "Bunch of Orange",
-          price: 29.99,
-          image: "image1.jpg",
-        },
-      ],
       cart: {},
       button_title: "",
       btns: ["title1", "title2", "title3"],
@@ -105,7 +71,6 @@ export default {
 
   name: "App",
   components: {
-    ProductCard,
     Modal,
     Slider,
   },
