@@ -1,5 +1,5 @@
 <template>
-  <div class="col-sm-6 col-md-4 col-xl-3">
+  <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
     <div class="card">
       <img
         :src="require('./../assets/image/' + product.image)"

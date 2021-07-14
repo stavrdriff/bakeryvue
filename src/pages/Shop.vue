@@ -1,6 +1,6 @@
 <template>
   <div class="shop">
-    <div class="row mb5">
+    <div class="row m-auto">
       <ProductCard
         v-for="product in products"
         :key="product.id"
